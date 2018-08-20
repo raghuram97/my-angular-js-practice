@@ -10,14 +10,19 @@
 
 <body>
 	
-<div ng-app="myApp" ng-controller="myctrl"</div>
-	{{firstname+""+lastname}}
+	<div ng-app="myApp" ng-controller="myCtrl">
+{{ firstName + " " + lastName }}
 </div>
-<script src="myApp.js"></script>
-<script src="myctrl.js"></script>
 
+<script>
+var app = angular.module("myApp", []);
+app.controller("myCtrl", function($scope) {
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+});
+</script>
 
-
+<p>It is recommended that you load the AngularJS library either in the HEAD or at the start of the BODY.</p>
 
 </body>
 </html>

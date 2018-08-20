@@ -10,19 +10,8 @@
 
 <body>
 	
-	<div ng-app="myApp" ng-controller="myCtrl">
-{{ firstName + " " + lastName }}
-</div>
-
-<script>
-var app = angular.module("myApp", []);
-app.controller("myCtrl", function($scope) {
-    $scope.firstName = "John";
-    $scope.lastName = "Doe";
-});
-</script>
-
-<p>It is recommended that you load the AngularJS library either in the HEAD or at the start of the BODY.</p>
-
+	<div ng-app="" ng-init="firstname='raghu'">
+		<p>nam:<input type="text" ng-model="firstname"></p>
+	</div>
 </body>
 </html>

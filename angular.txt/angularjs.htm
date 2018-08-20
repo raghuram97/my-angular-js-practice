@@ -10,16 +10,16 @@
 
 <body>
 	
-	<div data-ng-app="" data-ng-init="quantity=1;price=5">
+	<div ng-app="myapp"ng-controller="myctrl">
+		name:<input ng-model="name">
+		<h1>you entered:{{name}}</h1>
+		</div>
+		<script>
+			var app=angular.module('myapp',[]);
+			app.controller('myctrl',function($scope){
+			$scope.name="raghu ram";
+		});
 
-<h2>Cost Calculator</h2>
-
-Quantity: <input type="number" ng-model="quantity">
-Price: <input type="number" ng-model="price">
-
-<p><b>Total in dollar:</b> {{quantity * price}}</p>
-
-
-	</div>
+		</script>
 </body>
 </html>

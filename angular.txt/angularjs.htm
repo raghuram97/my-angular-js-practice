@@ -10,18 +10,12 @@
 
 <body>
 	
-<div ng-app="myApp" w3-test-directive></div>
+<div ng-app="myApp" ng-controller="myctrl"</div>
+	{{firstname+""+lastname}}
+</div>
+<script src="myApp.js"></script>
+<script src="myctrl.js"></script>
 
-<script>
-var app = angular.module("myApp", []);
-app.directive("w3TestDirective", function() {
-    return {
-        template : "I was made in a directive constructor!"
-    };
-});
-</script>
-
-		
 
 
 

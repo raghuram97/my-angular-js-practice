@@ -9,8 +9,25 @@
 
 
 <body>
-	<form ng-app=""name="myform"></form>
-	email:<input type="email" name="myaddress" ng-model="text">
-	<span ng-show="myform.myaddress".$error.email">not a valid email address</form> </span>
+	<div ng-app="myapp" ng-controller="personctrl">
+		firstname:<input type="text" ng-model='firstname'><br>
+		secondname:<input type="text" ng-model='secondname'><br>
+		full name: {{fullName()}}
+
+
+	</div>
+	<script>
+		var app=angular.module('myapp',[]);
+		app.controller('personctrl',function($scope){
+			$scope.firstname="raghu"
+
+			$scope.secondname="ram"
+			$scope.fullName= function(){
+				return $scope.firstname+ ""+$scope.lastname;
+
+			};
+
+		});
+	</script>
 </body>
 </html>

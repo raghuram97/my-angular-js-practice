@@ -1,33 +1,22 @@
 <!DOCTYPE html>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-
-<head>
-	<title>angular js practice</title>
-
-</head>
-
-
 <body>
-	<div ng-app="myapp" ng-controller="personctrl">
-		firstname:<input type="text" ng-model='firstname'><br>
-		secondname:<input type="text" ng-model='secondname'><br>
-		full name: {{fullName()}}
 
+<div ng-app="myApp" ng-controller="myCtrl">
 
-	</div>
-	<script>
-		var app=angular.module('myapp',[]);
-		app.controller('personctrl',function($scope){
-			$scope.firstname="raghu"
+<h1>{{myname}}</h1>
 
-			$scope.secondname="ram"
-			$scope.fullName= function(){
-				return $scope.firstname+ ""+$scope.lastname;
+</div>
 
-			};
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.myname = "raghu";
+});
+</script>
 
-		});
-	</script>
+<p>The property "carname" was made in the controller, and can be referred to in the view by using the {{ }} brackets.</p>
+
 </body>
 </html>

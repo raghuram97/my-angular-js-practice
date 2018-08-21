@@ -9,17 +9,8 @@
 
 
 <body>
-	
-	<div ng-app="myapp"ng-controller="myctrl">
-		name:<input ng-model="name">
-		<h1>you entered:{{name}}</h1>
-		</div>
-		<script>
-			var app=angular.module('myapp',[]);
-			app.controller('myctrl',function($scope){
-			$scope.name="raghu ram";
-		});
-
-		</script>
+	<form ng-app=""name="myform"></form>
+	email:<input type="email" name="myaddress" ng-model="text">
+	<span ng-show="myform.myaddress".$error.email">not a valid email address</form> </span>
 </body>
 </html>
